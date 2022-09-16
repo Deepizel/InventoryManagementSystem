@@ -1,0 +1,85 @@
+
+.report{
+  /* border: 1px solid grey; */
+  width: 250px;
+  height: 100px;
+  margin-top: 10px;
+  margin-left: 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+ padding: 20px 20px 20px ;
+ border-radius: 10px;
+}
+.reportcard{
+  display: flex;
+}
+.reportdetails{
+  margin-top: 10px;
+  margin-left: 30px;
+  background-color: #624F74;
+  color: white;
+}
+
+ .greeting{
+ margin-top: 20px;
+ /* margin-left: 15px; */
+} 
+.charts{
+  display: flex;
+}
+#storelog{
+  height: 60px;
+  width: 60px;
+  margin-top: 5px;
+}
+.blue{
+ background-color: #00779a;
+ height: 70px;
+  width: 80px;
+}
+.customdisplay{
+  border: px solid black;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  width: 900px;
+}
+
+.updatesection{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+   height: 300px;
+   width: 400px; 
+   margin-left: 150px;
+}
+
+.sales-history{
+  height: 300px;
+  width: 400px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.container-fluid{
+  padding: 0px 0px;
+}
+
+.mink{
+  margin: 0px 0px;
+ }
+/* .row>*{
+  width: 0%;
+    max-width: 0%;
+    padding-right: 0%;
+    padding-left: 0%;
+} */
+@media (max-width: 480px) {
+  .toplid{
+    display: block;
+  }.reportcard{
+    display: block;
+  }
+  .sales-history{
+    margin-top: 2em;
+    min-width: 100%;
+  }
+  .updatesection{
+    margin-top: 2em;
+    margin-left: 0;
+  }
+ 
+}

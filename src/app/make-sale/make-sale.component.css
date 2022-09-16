@@ -1,0 +1,50 @@
+body{
+    background-color: aliceblue;
+}
+.formcard{
+    height: 100px;
+    width: 95%;
+    border: 1px solid red;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: antiquewhite;
+}
+
+.clientdetails{
+
+}
+
+#userinfo{
+    margin-left: 20px;
+    width: 250px;
+}
+
+#prompt{
+    background-color: green;
+    color: white;
+}
+
+.additems{
+ border-bottom: 1px solid black;
+}
+
+.productSelect{
+    background-color: antiquewhite;
+    height: 90px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th{
+    background-color: black;
+    color: white;
+}
+#totalz{
+    margin-top: 50px;
+    margin-left: 45rem;
+}

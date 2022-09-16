@@ -1,0 +1,58 @@
+*{
+    background-image: url(../../assets/pngwing.com.png);
+    background-position: bottom;
+
+}
+input{
+    margin-bottom: 10px;
+}
+
+form{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 400px;
+    width: 400px;
+    margin-left: 100px;
+    background-color: aliceblue;
+}
+
+h2{
+    /* display: flex;
+    justify-content: center; */
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.updateform{
+    margin-top: 90px;
+}
+.btn{
+    margin-left: 110px ;
+}
+
+#button{
+    color: white;
+    border: none;
+    background-color: Green;
+    height: 40px;
+    width: 80px;
+    margin-top: 25px;
+}
+#button1{
+    color: white;
+    border: none;
+    background-color: red;
+    height: 40px;
+    width: 80px;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+#button:hover{
+    background-color: aqua;
+}
+label{
+    font-weight: bolder;
+}
+
+.container-fluid{
+    padding: 0px 0px 0px 0px;
+}
