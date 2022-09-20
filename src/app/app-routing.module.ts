@@ -17,7 +17,7 @@ import { UpdateProductsComponent } from './update-products/update-products.compo
 const routes: Routes = [
   {
     path: '',
-    component: LoginpageComponent,
+    component: LandingpageComponent,
   },
   {
     path: 'overview',
@@ -54,6 +54,10 @@ const routes: Routes = [
   {
     path: 'navbarr',
     component: NavbarComponent,
+  },
+  {
+    path: 'login',
+    component: LoginpageComponent,
   },
   // {
   //   // path: 'tnavbar',

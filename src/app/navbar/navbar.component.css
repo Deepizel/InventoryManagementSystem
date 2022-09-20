@@ -1,3 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 nav{
  color:white;
+ height: 100px;
+ width: 100%;
+ position: fixed;
+}
+
+.navbar-brand{
+    margin-left: 5em;
+    font-family: 'Monoton', cursive;
+    font-size: 30px;
+}
+
+button{
+    height: 50px;
+    width: 140px;
+    border: none;
+    background-color: green;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(68, 152, 68);
+}
+
+.lastbit a{
+ margin-right: 30px;
+ font-family: 'Open Sans', sans-serif;
+ font-weight: 900;
+ text-decoration: none;
+ 
 }
