@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('http://fonts.cdnfonts.com/css/diagramm');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+*{
+  padding: 0px;
+  margin: 0px;
+  overflow-x: hidden;
+}
+button{
+    height: 50px;
+    width: 140px;
+    border: none;
+    background-color: green;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(68, 152, 68);
+}
+
+.headr{
+    margin-left: 100px;
+}
+
+.headr h1{
+     font-family: 'Diagramm', sans-serif;
+    font-size: 50px;
+}
+
+.micron{
+    margin-left: -80px;
+    margin-top: -80px;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+li{
+    height: 90px;
+    width: 150px;
+}
+
+.cardsectn{
+    margin-top: 100px;
+    margin-left: 80px;
+    font-family: 'Diagramm', sans-serif;
+    margin-bottom: 50px;
+}
+
+.cardsectn h3{
+    font-family: 'Diagramm', sans-serif;
+    font-size: 50px;
+}
+
+#svg{
+    height: 80px;
+    width: 80px;
+}
+.cardtxt{
+    font-family: 'Diagramm', sans-serif;
+    margin-top: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.txtcard{
+    width: 150px;
+}
+
+.live{
+    margin-left: 80px;
+    margin-bottom: 80px;
+}
+
+.bluebase{
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.lastsect{
+    margin-top: 100px;
+    margin-left: 35%;
+    margin-bottom: 100px;
+}
+
+.lastsect p{
+    font-family: 'Mulish', sans-serif; font-size: 18px;
+    margin-bottom: 15px;
+}

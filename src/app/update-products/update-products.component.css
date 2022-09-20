@@ -11,7 +11,7 @@ form{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     height: 400px;
     width: 400px;
-    margin-left: 100px;
+    margin-left: 40px;
     background-color: aliceblue;
 }
 
@@ -22,9 +22,7 @@ h2{
     margin-left: 100px;
 }
 
-.updateform{
-    margin-top: 90px;
-}
+
 .btn{
     margin-left: 110px ;
 }

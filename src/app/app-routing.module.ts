@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AccountComponent } from './account/account.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LandingpageComponent } from './landingpage/landingpage.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { MakeSaleComponent } from './make-sale/make-sale.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -45,6 +46,14 @@ const routes: Routes = [
   {
     path: 'account',
     component: AccountComponent,
+  },
+  {
+    path: 'home',
+    component: LandingpageComponent,
+  },
+  {
+    path: 'navbarr',
+    component: NavbarComponent,
   },
   // {
   //   // path: 'tnavbar',

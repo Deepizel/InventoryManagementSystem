@@ -1,104 +1,109 @@
-*{
+* {
   margin: 0;
   padding: 0;
   overflow-y: hidden;
   overflow-x: hidden;
 }
-.col-lg-4{
+.col-lg-4 {
   height: 98vh;
 }
-.loginsect{
-    margin-top: 140px;
+.loginsect {
+  margin-top: 140px;
 }
 
-h1{
-    margin-left: 80px;
+h1 {
+  margin-left: 80px;
 }
 
-.form{
-    margin-left: 90px;
-    margin-top: 30px;
+.form {
+  margin-left: 90px;
+  margin-top: 30px;
 }
 
-input{
-    /* border: none; */
-    box-shadow: 5px 5px #888888;
-    height: 40px;
-    width: 250px;
+input {
+  /* border: none; */
+  box-shadow: 5px 5px #888888;
+  height: 40px;
+  width: 250px;
 }
 
-button:hover{
-    background-color: aqua;
+button:hover {
+  background-color: aqua;
 }
 
-a{
-    text-decoration: none;
-    margin-left: 70px;
+a {
+  text-decoration: none;
+  margin-left: 70px;
 }
-
+.linkz {
+  margin-left: -50px;
+}
+#btn:hover {
+  background-color: blue;
+}
 /* second section */
 
-.spac{
-    background-image: url(../../assets/login.jpeg);
-    height: 90vh;
+.spac {
+  background-image: url(../../assets/login.jpeg);
+  height: 90vh;
 }
 
-.spac h1{
-    margin-top: 200px;
-    color: aliceblue;
-    font-weight: 600;
+.spac h1 {
+  margin-top: 200px;
+  color: aliceblue;
+  font-weight: 600;
 }
 
-.spac p{
-    color: aliceblue;
-    margin-left: 250px;
-    background-color: #888888;
-    width: 330px;
-    font-size: larger;
-    text-align: center;
+.spac p {
+  color: aliceblue;
+  margin-left: 250px;
+  background-color: #888888;
+  width: 330px;
+  font-size: larger;
+  text-align: center;
 }
 
-.overlay{
-    height: 650px;
-    width: 850px;
-    background-color: rgba(25, 2, 2, 0.559);
-    margin-left: 40px;
-    margin-top: 20px;
+.overlay {
+  height: 650px;
+  width: 850px;
+  background-color: rgba(25, 2, 2, 0.559);
+  margin-left: 40px;
+  margin-top: 20px;
 }
 
 @media (max-width: 780px) {
-  .spac{
+  .spac {
     display: none;
   }
-  .overlay{
+  .overlay {
     display: none;
   }
-  *[_ngcontent-rgu-c51]{
+  *[_ngcontent-rgu-c51] {
     overflow-y: none;
   }
 
-  .loginsect{
-   align-items: center;
+  .loginsect {
+    align-items: center;
   }
-  .spac h1{
-  align-items: center;
+  .spac h1 {
+    align-items: center;
   }
 
-  .spac p{
-  align-items: center;
-   }
-  *[_ngcontent-trp-c51]{
+  .spac p {
+    align-items: center;
+  }
+  *[_ngcontent-trp-c51] {
     margin: none;
   }
 
-  .col-lg-8{
+  .col-lg-8 {
     display: none;
   }
 
-  h1{
+  h1 {
     margin-left: 130px;
   }
-  input{
+  input {
     margin-left: 30px;
   }
 }

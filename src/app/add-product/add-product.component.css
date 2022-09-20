@@ -57,12 +57,14 @@ color: #112A48!important;
 
 .listproduct{
     padding: 0px 0px;
-    margin-left: -350px;
+    margin-left: -400px;
     margin-top: 40px;
 }
 
 input{
     margin-bottom: 10px;
+    border: 2px solid grey;
+    border-radius: 10px;
 }
 
 form{
@@ -76,9 +78,10 @@ h2{
     display: flex;
     justify-content: center;
     margin-top: 40px;
+    margin-left: -100px;
 }
 .btn{
-    margin-left: 110px ;
+    margin-left: 90px ;
 }
 
 #button{

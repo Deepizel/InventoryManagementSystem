@@ -25,6 +25,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { TestsidenavComponent } from './testsidenav/testsidenav.component';
 import { ProductlogComponent } from './productlog/productlog.component';
 import { AccountComponent } from './account/account.component';
+import { LandingpageComponent } from './landingpage/landingpage.component';
 
 
 
@@ -49,6 +50,7 @@ import { AccountComponent } from './account/account.component';
     TestsidenavComponent,
     ProductlogComponent,
     AccountComponent,
+    LandingpageComponent,
   ],
   imports: [
     BrowserModule,
