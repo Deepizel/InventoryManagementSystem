@@ -1,0 +1,113 @@
+@import url(https://unpkg.com/@webpixels/css@1.1.5/dist/index.css);
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css"); */
+#navbarVertical{
+    background-color: #112A48;
+}
+
+.nav-item:hover, .nav-link:hover{
+background-color: white!important;
+color: #112A48!important;
+}
+.nav-link{
+    cursor: pointer;
+}
+.bi-question-circle-fill{
+    font-size: 50px;
+    color: #112A48;
+}
+.modal-footer{
+    display: flex;
+    justify-content: center;
+}
+.btn-primary{
+    background-color: #112A48;
+    border: none;
+}
+.btn-primary:active{
+    background-color: #112A48;
+    border: none;
+}
+.btn-primary:hover{
+    background-color: #112A48;
+    border: none;
+}
+
+.container-fluid{
+    padding: 0px 0px;
+}
+
+.usersectn {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px black;
+  -webkit-box-shadow: 0px 1px 1px #de1dde;
+  -moz-box-shadow: 0px 1px 1px #de1dde;
+  box-shadow: 0px 1px 1px #de1dde;
+}
+
+.account {
+  display: flex;
+}
+
+.topsctnn {
+  background-color: white;
+  color: black;
+  border-left: 2px solid black;
+}
+
+.listproduct{
+    padding: 0px 0px;
+    margin-left: -400px;
+    margin-top: 40px;
+}
+
+input{
+    margin-bottom: 10px;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+form{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 350px;
+    width: 400px;
+    margin-left: 480px;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: -100px;
+}
+.btn{
+    margin-left: 90px ;
+}
+
+#button{
+    color: white;
+    border: none;
+    background-color: Green;
+    height: 40px;
+    width: 80px;
+    margin-top: 25px;
+}
+#button1{
+    color: white;
+    border: none;
+    background-color: red;
+    height: 40px;
+    width: 80px;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+#button:hover{
+    background-color: aqua;
+}
+label{
+    font-weight: bolder;
+}
+
+/* #topbtn{
+    margin-left: 40px;
+} */

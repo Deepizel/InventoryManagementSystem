@@ -2,23 +2,64 @@
   <section
     class="signup"
     style="
-      background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');
+      background-color: rgb(8, 17, 26); overflow-y: hidden; overflow-x: hidden;
     "
   >
     <div class="row">
-      <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+      <div class="col-12 col-md-9 col-lg-7 col-xl-6 jingle">
         <div class="formcrate">
           <h3 class="text-center mt-3 mb-3">CREATE AN ACCOUNT</h3>
 
-          <form action="">
-            <input type="text" placeholder="Your Name" /><br />
-            <input type="text" placeholder="Your Email" /><br />
-            <input type="text" placeholder="Password" /><br />
-            <input type="text" placeholder="Repeat your password" /> <br />
-            &nbsp;
-            <p style="font-size:smaller; margin-left: 50px;">I agree to all statements in terms and conditions</p>
-            <button>REGISTER</button>
-            <p class="mt-2" style="margin-left:60px;">Already have an account?<a href="">Login here</a></p>
+          <form [formGroup]="signupForm">
+            <input formControlName="firstname" type="text" placeholder="first Name" /><br />
+             <small
+              *ngIf="
+                signupForm.controls['firstname'].dirty &&
+                signupForm.hasError('required', 'firstname')
+              "
+              class="text-danger"
+              >*firstname is required</small
+            >
+            <input formControlName="lastname" type="text" placeholder="Last Name" /><br />
+               <small
+              *ngIf="
+                signupForm.controls['lastname'].dirty &&
+                signupForm.hasError('required', 'lastname')
+              "
+              class="text-danger"
+              >*lastname is required</small
+            >
+            <input formControlName="email" type="email" placeholder="Your Email" /><br />
+               <small
+              *ngIf="
+                signupForm.controls['email'].dirty &&
+                signupForm.hasError('required', 'email')
+              "
+              class="text-danger"
+              >*username is required</small
+            >
+            <input formControlName="businessname" type="text" placeholder="Business Name" /><br />
+               <small
+              *ngIf="
+                signupForm.controls['businessname'].dirty &&
+                signupForm.hasError('required', 'businessname')
+              "
+              class="text-danger"
+              >*businessname is required</small
+            >
+            <input formControlName="password" type="password" placeholder="Password" /><br />
+               <small
+              *ngIf="
+                signupForm.controls['password'].dirty &&
+                signupForm.hasError('required', 'password')
+              "
+              class="text-danger"
+              >*username is required</small
+            >
+            <input type="password" placeholder="Repeat your password" /> <br />
+            <!-- <p style="font-size:smaller; margin-left: 50px;">I agree to all statements in terms and conditions</p> -->
+            <button (click)="onSubmit()">REGISTER</button>
+            <p class="mt-2" style="margin-left:60px;">Already have an account?<a routerLink="/login">Login here</a></p>
           </form>
         </div>
       </div>

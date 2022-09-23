@@ -2,9 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-
-
-
+import { NgxPaginationModule } from 'ngx-pagination'; 
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
@@ -26,6 +25,9 @@ import { TestsidenavComponent } from './testsidenav/testsidenav.component';
 import { ProductlogComponent } from './productlog/productlog.component';
 import { AccountComponent } from './account/account.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
+import { SupplierComponent } from './supplier/supplier.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 
 
@@ -51,14 +53,18 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
     ProductlogComponent,
     AccountComponent,
     LandingpageComponent,
+    SupplierComponent,
   ],
   imports: [
+    Ng2SearchPipeModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    NgxPaginationModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

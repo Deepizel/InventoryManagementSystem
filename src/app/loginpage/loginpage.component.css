@@ -4,17 +4,25 @@
   overflow-y: hidden;
   overflow-x: hidden;
 }
-.col-lg-4 {
+/* .col-lg-4 {
   height: 98vh;
-}
+} */
 .loginsect {
-  margin-top: 140px;
+  margin-top: 40px;
+  /* border: 1px solid grey; */
+  height: 500px;
+  width: 400px;
+  margin-left: 60px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 h1 {
   margin-left: 80px;
 }
-
+.formbit{
+  margin-top: 50px;
+  margin-left: -20px;
+}
 .form {
   margin-left: 90px;
   margin-top: 30px;
@@ -25,9 +33,18 @@ input {
   box-shadow: 5px 5px #888888;
   height: 40px;
   width: 250px;
+  padding: 12px 20px;
 }
 
-button:hover {
+#btn {
+  width: 250px;
+  height: 40px;
+  border: none;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+}
+#btn:hover {
   background-color: aqua;
 }
 
@@ -44,8 +61,13 @@ a {
 /* second section */
 
 .spac {
-  background-image: url(../../assets/login.jpeg);
-  height: 90vh;
+  background-image: url(../../assets/undraw_reminder_re_fe15.svg);
+  /* height: 90vh; */
+  height: 350px;
+  width: 100wh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 100px;
 }
 
 .spac h1 {
@@ -66,12 +88,13 @@ a {
 .overlay {
   height: 650px;
   width: 850px;
-  background-color: rgba(25, 2, 2, 0.559);
+  background-color: rgba(25, 2, 2, 0.6);
   margin-left: 40px;
-  margin-top: 20px;
 }
 
-@media (max-width: 780px) {
+
+
+/* @media (max-width: 780px) {
   .spac {
     display: none;
   }
@@ -106,4 +129,4 @@ a {
   input {
     margin-left: 30px;
   }
-}
+} */

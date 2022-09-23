@@ -11,6 +11,7 @@ import { OverviewComponent } from './overView/overview.component';
 import { ProductlogComponent } from './productlog/productlog.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { SupplierComponent } from './supplier/supplier.component';
 import { TestsidenavComponent } from './testsidenav/testsidenav.component';
 import { UpdateProductsComponent } from './update-products/update-products.component';
 
@@ -59,10 +60,10 @@ const routes: Routes = [
     path: 'login',
     component: LoginpageComponent,
   },
-  // {
-  //   // path: 'tnavbar',
-  //   // component: TestsidenavComponent,
-  // },
+  {
+    path: 'suppliers',
+    component: SupplierComponent,
+  },
   {
     path: 'productlog',
     component: ProductlogComponent,

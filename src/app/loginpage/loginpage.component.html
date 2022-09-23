@@ -54,56 +54,67 @@
 
 <section>
   <div class="row">
-    <div class="col-lg-4">
+    <div class="col-md-12 col-sm-12 col-lg-4 col-xl-6">
       <div class="loginsect">
-        <h1>Welcome back</h1>
-        <div class="form">
-          <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
-            <input
-              type="text"
-              placeholder="Enter Username"
-              name="username"
-              ngModel
-            />
-            <br />
-            <br />
-            <input
-              type="text"
-              placeholder="Enter Password"
-              name="password"
-              ngModel
-            />
-            <br /><br />
-            <input
-              type="submit"
-              value="Login"
-              id="btn"
-              style="
-                width: 250px;
-                height: 40px;
-                border: none;
-                background-color: green;
-                color: white;
-                border-radius: 10px;
-              "
-            />
+        <div class="formbit">
+          <h1>Welcome back</h1>
+          <div class="form">
+            <form [formGroup]="loginForm">
+              <input
+                type="text"
+                placeholder="Enter Username"
+                formControlName="username"
+              />
+              <br />
+              <small
+                *ngIf="
+                  loginForm.controls['username'].dirty &&
+                  loginForm.hasError('required', 'username')
+                "
+                class="text-danger"
+                >*username is required</small
+              >
+              <br />
+              <br />
+              <input
+                type="password"
+                placeholder="Enter Password"
+                formControlName="password"
+              />
+              <br />
+              <small
+                *ngIf="
+                  loginForm.controls['password'].dirty &&
+                  loginForm.hasError('required', 'password')
+                "
+                class="text-danger"
+                >*password is required</small
+              >
+              <br /><br />
+              <button (click)="onSubmit()" type="submit" id="btn">
+                Submit
+              </button>
 
-            <br />
-            <br />
-            <div>
-            <a href="#">Forgot Password?</a> <br>
-            <a href="#">New user? sign up</a>
-            </div>
-          </form>
+              <br />
+              <br />
+              <div>
+                <a href="#">Forgot Password?</a> <br />
+                <a routerLink="/signup">New user? sign up</a>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-lg-8">
-      <div class="spac overlay">
-        <h1>
-          <span style="color: rgb(0, 128, 0)">SHOP CART MANAG</span>EMENT SYSTEM
-        </h1>
-        <p>Manage your merch, all in one place</p>
+    <div class="d-none d-lg-block col-lg-6">
+      <div class="spac">
+        <!-- <div class="overlay">
+          <h1>
+            <span style="color: rgb(0, 128, 0)">SHOP CART MANAG</span>EMENT
+            SYSTEM
+          </h1>
+          <p>Manage your merch, all in one place</p>
+        </div> -->
       </div>
     </div>
   </div>

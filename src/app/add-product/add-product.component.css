@@ -1,5 +1,11 @@
 @import url(https://unpkg.com/@webpixels/css@1.1.5/dist/index.css);
 /* @import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css"); */
+*{
+    margin: 0px;
+    padding: 0px;
+    /* overflow-x: hidden; */
+}
+
 #navbarVertical{
     background-color: #112A48;
 }
@@ -74,6 +80,10 @@ form{
     margin-left: 480px;
 }
 
+.formarea{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 h2{
     display: flex;
     justify-content: center;

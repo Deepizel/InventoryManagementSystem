@@ -15,7 +15,8 @@ export class UpdateProductsComponent implements OnInit {
     id: 0,
     productName: '',
     quantity: 0,
-    price: 0,
+    costPrice: 0,
+    sellPrice: 0,
     category: '',
   };
 

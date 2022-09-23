@@ -1,0 +1,18 @@
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+input{
+    height: 50px;
+    width: 200px;
+    border: 2px solid grey;
+    padding: 0px 24px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.topper{
+    justify-content: space-between;
+
+}
