@@ -52,14 +52,14 @@
               </div>
               <hr />
               <table class="table mx-3" *ngIf="products && products.length > 0">
-                <thead class="thead-light">
+                <thead class="thead-dark">
                   <tr>
-                    <th>ProductName</th>
-                    <th>Quantity</th>
-                    <th>CP</th>
-                    <th>SP</th>
-                    <th>PM</th>
-                    <th>Category</th>
+                    <th style="color: white;font-size: 13px;">ProductName</th>
+                    <th style="color: white;font-size: 13px;">Quantity</th>
+                    <th style="color: white;font-size: 13px;">CP</th>
+                    <th style="color: white;font-size: 13px;">SP</th>
+                    <th style="color: white;font-size: 13px;">PM</th>
+                    <th style="color: white;font-size: 13px;">Status</th>
                     <th></th>
                   </tr>
                 </thead>
@@ -67,7 +67,7 @@
                   <tr
                     *ngFor="
                       let Products of products
-                        | paginate: { itemsPerPage: 6, currentPage: p }
+                        | paginate:  { itemsPerPage: 6, currentPage: p, id: '3' }
                         | filter: searchText
                     "
                   >
@@ -76,7 +76,7 @@
                     <th>{{ Products.quantity }}</th>
                     <th>{{ Products.costPrice }}</th>
                     <th>{{ Products.sellPrice }}</th>
-                    <th>{{ Products.sellPrice }}</th>
+                    <th>{{ Products.margin }}</th>
                     <th
                       [ngClass]="Products.category"
                     >
@@ -108,7 +108,7 @@
               <p *ngIf="!products || products.length <= 0">No product found</p>
               <!-- pagination function -->
 
-              <pagination-controls
+              <pagination-controls id="3"
                 (pageChange)="p = $event"
               ></pagination-controls>
             </div>

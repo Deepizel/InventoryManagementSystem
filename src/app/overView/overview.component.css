@@ -50,12 +50,19 @@
 }
 
 .sales-history{
-  height: 300px;
+  /* height: 300px; */
   width: 400px;
+  overflow-y: scroll;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .container-fluid{
   padding: 0px 0px;
+}
+
+.sales-history{
+  height: 400px;
+  width: 380px;
+
 }
 
 .mink{
@@ -67,7 +74,7 @@
     padding-right: 0%;
     padding-left: 0%;
 } */
-@media (max-width: 480px) {
+@media (max-width: 750px) {
   .toplid{
     display: block;
   }.reportcard{

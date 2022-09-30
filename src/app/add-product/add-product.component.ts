@@ -16,8 +16,9 @@ export class AddProductComponent implements OnInit {
     quantity: 0,
     costPrice: 0,
     sellPrice: 0,
+    margin: 0,
     category: '',
-    updatedOn:"",
+    updatedOn: '',
   };
 
   constructor(

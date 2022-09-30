@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductlogComponent implements OnInit {
   searchText: any;
+  page = 1;
   p: number = 1;
   collection!: any[];
   products: Products[] = [];
@@ -21,6 +22,7 @@ export class ProductlogComponent implements OnInit {
     quantity: 0,
     costPrice: 0,
     sellPrice: 0,
+    margin: 0,
     category: '',
     updatedOn: '',
   };
@@ -35,6 +37,7 @@ export class ProductlogComponent implements OnInit {
     this.productsService.getAllProducts().subscribe((res: { data: any }) => {
       this.products = res.data;
       console.log(res.data);
+      this.page = 5;
 
       this.route.paramMap.subscribe({
         next: (params: { get: (arg0: string) => any }) => {
@@ -43,6 +46,7 @@ export class ProductlogComponent implements OnInit {
             this.productsService.getProduct(id).subscribe({
               next: (response) => {
                 this.productDetails = response;
+                this.page = 5;
               },
             });
           }

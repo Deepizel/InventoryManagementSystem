@@ -4,6 +4,7 @@ export interface Products {
   quantity: number;
   costPrice: number;
   sellPrice: number;
+  margin: number;
   category: string;
   updatedOn: any;
 }
