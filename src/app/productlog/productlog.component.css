@@ -16,3 +16,36 @@ input{
     justify-content: space-between;
 
 }
+
+.Beverages , .Electronics , .high {
+  margin: 1rem;
+  border:1px solid currentColor;
+  padding: 0.5rem;
+}
+
+.Available{
+ color: green;
+ margin-left: 30px;
+}
+
+.Unavailable {
+color: rgb(133, 202, 14)
+}
+
+.Low{
+  color: red
+}
+
+.Pending{
+  color: darkblue;
+}
+
+.Discontinued{
+  color: darkslategray;
+}
+
+table{
+  border: 2px solid black;
+  color: black;
+  font-size: 32px;
+}

@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { NgxPaginationModule } from 'ngx-pagination'; 
+import { NgxPaginationModule } from 'ngx-pagination';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,10 +27,6 @@ import { AccountComponent } from './account/account.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { SupplierComponent } from './supplier/supplier.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
-
-
-
 
 @NgModule({
   declarations: [

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ThisReceiver } from '@angular/compiler';
+import { Users } from '../user/user.module';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
+import { UsersService } from '../Services/users.service';
 import {
   FormBuilder,
   FormControl,
@@ -15,8 +19,22 @@ import {
   styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent implements OnInit {
+  addUserRequest: Users = {
+    firstName: '',
+    lastName: '',
+    businessName: '',
+    email: '',
+    password: '',
+    data: {},
+  };
+
   signupForm!: FormGroup;
-  constructor(private fb : FormBuilder) {}
+
+  constructor(
+    private fb: FormBuilder,
+    private UsersService: UsersService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.signupForm = this.fb.group({
@@ -27,8 +45,16 @@ export class SignUpComponent implements OnInit {
       password: ['', Validators.required],
     });
   }
+  addUser() {
+    this.UsersService.addUser(this.addUserRequest).subscribe({
+      next: (Users: any) => {
+        this.router.navigate(['login']);
+      },
+    });
+    console.log(this.addUserRequest);
+  }
 
-   onSubmit(){
+  onSubmit() {
     if (this.signupForm.valid) {
       console.log(this.signupForm.value);
     } else {
@@ -36,8 +62,11 @@ export class SignUpComponent implements OnInit {
       this.validateAllFormFields(this.signupForm);
       alert('your form is invalid');
     }
-   }
+  }
 
+  alertWithSuccess() {
+    Swal.fire('Thank you...', 'You submitted succesfully!', 'success');
+  }
 
   private validateAllFormFields(formGroup: FormGroup) {
     Object.keys(formGroup.controls).forEach((field) => {

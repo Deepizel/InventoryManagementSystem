@@ -5,4 +5,5 @@ export interface Products {
   costPrice: number;
   sellPrice: number;
   category: string;
+  updatedOn: any;
 }

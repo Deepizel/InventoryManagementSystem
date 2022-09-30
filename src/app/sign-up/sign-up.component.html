@@ -10,8 +10,8 @@
         <div class="formcrate">
           <h3 class="text-center mt-3 mb-3">CREATE AN ACCOUNT</h3>
 
-          <form [formGroup]="signupForm">
-            <input formControlName="firstname" type="text" placeholder="first Name" /><br />
+          <form [formGroup]="signupForm" (submit)="addUser()">
+            <input formControlName="firstname" type="text" placeholder="first Name" [(ngModel)]="addUserRequest.firstName"/><br />
              <small
               *ngIf="
                 signupForm.controls['firstname'].dirty &&
@@ -20,7 +20,7 @@
               class="text-danger"
               >*firstname is required</small
             >
-            <input formControlName="lastname" type="text" placeholder="Last Name" /><br />
+            <input formControlName="lastname" type="text" placeholder="Last Name" [(ngModel)]="addUserRequest.lastName" /><br />
                <small
               *ngIf="
                 signupForm.controls['lastname'].dirty &&
@@ -29,7 +29,7 @@
               class="text-danger"
               >*lastname is required</small
             >
-            <input formControlName="email" type="email" placeholder="Your Email" /><br />
+            <input formControlName="email" type="email" placeholder="Your Email" [(ngModel)]="addUserRequest.email" /><br />
                <small
               *ngIf="
                 signupForm.controls['email'].dirty &&
@@ -38,7 +38,7 @@
               class="text-danger"
               >*username is required</small
             >
-            <input formControlName="businessname" type="text" placeholder="Business Name" /><br />
+            <input formControlName="businessname" type="text" placeholder="Business Name" [(ngModel)]="addUserRequest.businessName"/><br />
                <small
               *ngIf="
                 signupForm.controls['businessname'].dirty &&
@@ -47,7 +47,7 @@
               class="text-danger"
               >*businessname is required</small
             >
-            <input formControlName="password" type="password" placeholder="Password" /><br />
+            <input formControlName="password" type="password" placeholder="Password" [(ngModel)]="addUserRequest.password"/><br />
                <small
               *ngIf="
                 signupForm.controls['password'].dirty &&
@@ -56,9 +56,9 @@
               class="text-danger"
               >*username is required</small
             >
-            <input type="password" placeholder="Repeat your password" /> <br />
+            <!-- <input type="password" placeholder="Repeat your password" /> <br /> -->
             <!-- <p style="font-size:smaller; margin-left: 50px;">I agree to all statements in terms and conditions</p> -->
-            <button (click)="onSubmit()">REGISTER</button>
+            <button type="submit" (click)="alertWithSuccess()" routerLink="/login">REGISTER</button>
             <p class="mt-2" style="margin-left:60px;">Already have an account?<a routerLink="/login">Login here</a></p>
           </form>
         </div>

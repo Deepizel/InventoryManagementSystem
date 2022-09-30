@@ -21,11 +21,11 @@ const routes: Routes = [
     component: LandingpageComponent,
   },
   {
-    path: 'overview',
+    path: 'overview/:id',
     component: OverviewComponent,
   },
   {
-    path: 'overview/updateproduct/:id',
+    path: 'productlog/updateproduct/:id',
     component: UpdateProductsComponent,
   },
   {

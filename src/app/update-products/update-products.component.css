@@ -1,18 +1,21 @@
 *{
-    background-image: url(../../assets/pngwing.com.png);
+
     background-position: bottom;
 
 }
 input{
     margin-bottom: 10px;
+    border: 2px solid grey;
+    width: 300px;
+    height: 30px;
+    margin-left: 20px;
 }
 
 form{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    height: 400px;
-    width: 400px;
+    height: 530px;
+    width: 330px;
     margin-left: 40px;
-    background-color: aliceblue;
 }
 
 h2{
@@ -22,9 +25,8 @@ h2{
     margin-left: 100px;
 }
 
-
 .btn{
-    margin-left: 110px ;
+    margin-left: 40px ;
 }
 
 #button{
@@ -33,7 +35,6 @@ h2{
     background-color: Green;
     height: 40px;
     width: 80px;
-    margin-top: 25px;
 }
 #button1{
     color: white;
@@ -41,7 +42,6 @@ h2{
     background-color: red;
     height: 40px;
     width: 80px;
-    margin-top: 25px;
     margin-left: 20px;
 }
 #button:hover{
@@ -49,6 +49,7 @@ h2{
 }
 label{
     font-weight: bolder;
+    margin-left: 20px;
 }
 
 .container-fluid{

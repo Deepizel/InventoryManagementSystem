@@ -18,14 +18,16 @@
 
 .formcrate{
     border: 1px solid white;
-    height: 530px;
+    height: 600px;
     width: 350px;
     /* margin-left: 70%; */
     background-color: white;
     margin-top: 50px;
     border-radius: 5px;
 }
-
+small{
+    margin-left: 20px;
+}
 .signup{
     height: 690px;
 }

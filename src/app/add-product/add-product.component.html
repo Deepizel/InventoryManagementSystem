@@ -3,25 +3,25 @@
     <div class="col-lg-2">
       <app-sidenav></app-sidenav>
     </div>
-    <div class="form-area col-md-12 col-sm-12 col-lg-6 col-xl-6">
+    <div class=" col-md-12 col-sm-12 col-lg-6 col-xl-6">
       <div class="row wrapper">
-         <h2>New inventory Information</h2>
+         <!-- <h5>New inventory Information</h5> -->
       <div class="listproduct">
         <form #form="ngForm" (ngSubmit)="addProduct()">
           <label for="productName" id="topbtn" class="mt-3 mx-2"
             >Product Name:</label
-          >
+          > <br>
           <input
             type="text"
             id="productName"
             name="productName"
             [(ngModel)]="addProductRequest.productName"
-            style="width: 190px"
+            style="width:300px"
             class="mx-"
             counter="disable"
           />
           <br />
-          <label for="quantity" class="mt-3 mx-3">Enter quantity:</label>
+          <label for="quantity" class="mt-3 mx-3">Enter quantity:</label> <br>
           <input
             type="number"
             min="1"
@@ -30,7 +30,7 @@
             [(ngModel)]="addProductRequest.quantity"
           />
           <br />
-          <label for="Price" class="mt-3 mx-5">Cost:</label>
+          <label for="Price" class="mt-3 mx-3">Cost:</label><br>
           <input
             type="number"
             min="1"
@@ -39,7 +39,7 @@
             [(ngModel)]="addProductRequest.costPrice"
           />
           <br />
-          <label for="Price" class="mt-3 mx-5">Price:</label>
+          <label for="Price" class="mt-3 mx-3">Price:</label> <br>
           <input
             type="number"
             min="1"
@@ -48,7 +48,7 @@
             [(ngModel)]="addProductRequest.sellPrice"
           />
           <br />
-          <label for="Category" class="mt-3 mx-4">Category:</label>
+          <label for="Category" class="mt-3 mx-3">Status:</label> <br>
           <input
             type="number"
             min="1"
@@ -59,12 +59,12 @@
           />
           <br />
           <p style="color: red; font-size: smaller" class="mx-3">
-            *Product Categories should be listed under the following<br />
-            1.Fashion 2.Electronics 3.Beverages 4.Toiletries 5.Fooditems
+            *Product status should be listed under the following<br />
+            1.Available 2.Unavaialble 3.Low 4.Pending restock <br> 5. Discontinued
           </p>
           <div class="btn">
-            <input type="submit" (click)="addProduct()" id="button" value="Submit" />
-            <input type="button" id="button1" value="Back" />
+            <input type="submit" (click)="addProduct()" (click)="alertWithSuccess()" [routerLink]="['/productlog']" routerLinkActive="router-link-active"  id="button" value="Submit" />
+            <input type="button" type="submit" routerLink="/overview" id="button1" value="Back" />
           </div>
         </form>
       </div>

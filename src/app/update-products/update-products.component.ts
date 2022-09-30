@@ -8,9 +8,7 @@ import { ProductsService } from '../Services/products.service';
   templateUrl: './update-products.component.html',
   styleUrls: ['./update-products.component.css'],
 })
-  
 export class UpdateProductsComponent implements OnInit {
- 
   updateDetails: Products = {
     id: 0,
     productName: '',
@@ -18,14 +16,16 @@ export class UpdateProductsComponent implements OnInit {
     costPrice: 0,
     sellPrice: 0,
     category: '',
+    updatedOn: '',
   };
 
   constructor(
     private route: ActivatedRoute,
-    private productservice: ProductsService, private router:Router
-  ) { }
+    private productservice: ProductsService,
+    private router: Router
+  ) {}
 
-  // updatenewProduct: Products = {
+  // updateProduct: Products {
   //   id: 0,
   //   productName: "",
   //   quantity: 0,
@@ -33,24 +33,52 @@ export class UpdateProductsComponent implements OnInit {
   //   category: ''
   // };
 
+  ngOnInit(): void {
+    //  this.route.paramMap.subscribe({
+    //   next: (params) => {
+    //     const id = params.get('id');
 
-  ngOnInit(): void { 
-  }
-
-  updateProduct() {
-     this.route.paramMap.subscribe({
-      next: (params) => {
-        const id = params.get('id');
-
+    //     if (id) {
+    //       this.productservice.getProduct('id')
+    //         .subscribe({
+    //         next: (response) => {
+    //           this.updateDetails = response;
+    //         },
+    //       });
+    //     }
+    //   }
+    // });
+    this.route.paramMap.subscribe({
+      next: (params: { get: (arg0: string) => any }) => {
+        const id: any = params.get('id');
         if (id) {
-          this.productservice.getProduct(id)
-            .subscribe({
+          this.productservice.getProduct(id).subscribe({
             next: (response) => {
               this.updateDetails = response;
             },
           });
         }
-      }
+      },
     });
- }
+  }
+
+  updateProduct() {
+    this.productservice
+      .updateProduct(this.updateDetails.id, this.updateDetails)
+      .subscribe({
+        next: (response) => {
+          this.router.navigate(['addproduct']);
+        },
+      });
+  }
+
+  // updateProduct() {
+  //   this.productservice
+  //     .updateProduct(this.updateDetails.id, this.updateDetails)
+  //     .subscribe({
+  //       next: (_response) => {
+  //         this.router.navigate(['productlog']);
+  //       },
+  //     });
+  // }
 }
