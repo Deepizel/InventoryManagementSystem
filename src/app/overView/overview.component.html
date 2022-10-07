@@ -25,32 +25,37 @@
       <div class="row">
         <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
           <div class="reportdetails report mx-3 mt-3 d-flex">
+            <img src="../../assets/box1.svg" alt="" srcset="">
             <p style="font-size: 16px; font-weight: bolder">
-              Total
+              
               <span style="font-size: 20px; font-weight: bolder">
-                Units:{{ products.length }}
+               Total Units:{{ products.length }}
               </span>
             </p>
           </div>
         </div>
 
         <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
-          <div class="reportdetails report mt-3 mx-3">
-            <p style="font-size: 16px; font-weight: bolder">Suppliers listed</p>
-            <p style="font-size: 20px; font-weight: bolder">Units:0</p>
+          <div class="reportdetails report mt-3 mx-3 d-flex">
+       <img src="../../assets/box1.svg" alt="" srcset="">
+            <p style="font-size: 16px; font-weight: bolder">
+              
+              <span style="font-size: 20px; font-weight: bolder">
+               Total Units:{{ products.length }}
+              </span>
+            </p>
           </div>
         </div>
         <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
-          <div class="reportdetails report mt-3 mx-3">
-            <p style="font-size: 16px; font-weight: bolder">
-              Products on pause
-            </p>
-            <p style="font-size: 16px; font-weight: bolder">Units:0</p>
+          <div class="reportdetails report mt-3 mx-3 d-flex">
+            <img src="../../assets/layers-half.svg" alt="" srcset="">
+            <p style="font-size: 16px; font-weight: bolder">Products on pause<br>Units:0</p>
           </div>
         </div>
 
         <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
           <div class="reportdetails report mx-3 mt-3 d-flex">
+            <img src="../../assets/box1.svg" alt="" srcset="">
             <p style="font-size: 16px; font-weight: bolder">
               Products
               <span style="font-size: 20px; font-weight: bolder">
@@ -70,7 +75,7 @@
             </h4><hr>
             <ul>
               <li *ngFor="let product of products">
-                {{ product.productName }} - updated on {{ product.updatedOn }}
+                <span style="color:black;">{{ product.productName }}</span> - was updated on <span style="color: red;">{{ product.updatedOn }}</span>
               </li>
             </ul>
             <hr />

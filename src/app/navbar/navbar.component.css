@@ -13,14 +13,16 @@ nav{
 }
 
 button{
-    height: 50px;
-    width: 140px;
-    border: none;
-    background-color: green;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    border-radius: 10px;
-    cursor: pointer;
+ margin-right: 30px;
+ font-family: 'Open Sans', sans-serif;
+ font-weight: 900;
+ text-decoration: none;
+ border: 1px solid white;
+ padding: 10px;
+ border-radius: 20px;
+ width: 100px;
+ background-color: transparent;
+ color: white;
 }
 button:hover{
     background-color: rgb(68, 152, 68);
@@ -29,14 +31,20 @@ button:hover{
 .lastbit{
     margin-left: 480px;
 }
-.lastbit a{
+#signin{
  margin-right: 30px;
  font-family: 'Open Sans', sans-serif;
  font-weight: 900;
  text-decoration: none;
- 
+ border: 1px solid white;
+ padding: 10px;
+ border-radius: 20px;
+ width: 100px;
+ background-color: transparent;
+ color: white;
 }
 
-.lastbit a:hover{
+#signin:hover{
     color: red;
+    background-color: rgb(12, 1, 24);
 }

@@ -58,7 +58,7 @@ export class LoginpageComponent implements OnInit {
               icon: 'success',
               title: 'Logged in successfully',
               showConfirmButton: false,
-              timer: 1200,
+              timer: 0,
             });
 
             this.router.navigate([`overview/${res.data.id}`]);
