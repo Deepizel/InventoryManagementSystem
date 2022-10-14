@@ -1,0 +1,68 @@
+<div class="container-fluid">
+  <section
+    class="signup"
+    style="
+      background-color: rgb(8, 17, 26); overflow-y: hidden; overflow-x: hidden;
+    "
+  >
+    <div class="row">
+      <div class="col-12 col-md-9 col-lg-7 col-xl-6 jingle">
+        <div class="formcrate">
+          <h3 class="text-center mt-3 mb-3">CREATE AN ACCOUNT</h3>
+
+          <form [formGroup]="signupForm" (submit)="addUser()">
+            <input formControlName="firstname" type="text" placeholder="first Name" [(ngModel)]="addUserRequest.firstName"/><br />
+             <small
+              *ngIf="
+                signupForm.controls['firstname'].dirty &&
+                signupForm.hasError('required', 'firstname')
+              "
+              class="text-danger"
+              >*firstname is required</small
+            >
+            <input formControlName="lastname" type="text" placeholder="Last Name" [(ngModel)]="addUserRequest.lastName" /><br />
+               <small
+              *ngIf="
+                signupForm.controls['lastname'].dirty &&
+                signupForm.hasError('required', 'lastname')
+              "
+              class="text-danger"
+              >*lastname is required</small
+            >
+            <input formControlName="email" type="email" placeholder="Your Email" [(ngModel)]="addUserRequest.email" /><br />
+               <small
+              *ngIf="
+                signupForm.controls['email'].dirty &&
+                signupForm.hasError('required', 'email')
+              "
+              class="text-danger"
+              >*username is required</small
+            >
+            <input formControlName="businessname" type="text" placeholder="Business Name" [(ngModel)]="addUserRequest.businessName"/><br />
+               <small
+              *ngIf="
+                signupForm.controls['businessname'].dirty &&
+                signupForm.hasError('required', 'businessname')
+              "
+              class="text-danger"
+              >*businessname is required</small
+            >
+            <input formControlName="password" type="password" placeholder="Password" [(ngModel)]="addUserRequest.password"/><br />
+               <small
+              *ngIf="
+                signupForm.controls['password'].dirty &&
+                signupForm.hasError('required', 'password')
+              "
+              class="text-danger"
+              >*username is required</small
+            >
+            <!-- <input type="password" placeholder="Repeat your password" /> <br /> -->
+            <!-- <p style="font-size:smaller; margin-left: 50px;">I agree to all statements in terms and conditions</p> -->
+            <button type="submit" (click)="alertWithSuccess()" routerLink="/login">REGISTER</button>
+            <p class="mt-2" style="margin-left:60px;">Already have an account?<a routerLink="/login">Login here</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

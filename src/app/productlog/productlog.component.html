@@ -1,0 +1,192 @@
+<div class="row">
+  <div class="col-lg-2">
+    <app-sidenav></app-sidenav>
+  </div>
+  <div class="col-lg-8">
+    <section>
+      <div class="row mt-3" style="background-color: rgb(244, 244, 249)"></div>
+    </section>
+    <section>
+      <div class="m-4">
+        <ul class="nav nav-tabs" id="myTab">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active" data-bs-toggle="tab"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#profile" class="nav-link" data-bs-toggle="tab">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a href="#profile2" class="nav-link" data-bs-toggle="tab"
+              >Profile</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#messages" class="nav-link" data-bs-toggle="tab"
+              >Messages</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="home">
+            <!-- <h4 class="mt-2">Home tab content</h4>
+            <p>
+              Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan
+              american apparel, butcher voluptate nisi qui. Raw denim you
+              probably haven't heard of them jean shorts Austin. Nesciunt tofu
+              stumptown aliqua, retro synth master cleanse. Mustache cliche
+              tempor, williamsburg carles vegan helvetica. Reprehenderit butcher
+              retro keffiyeh dreamcatcher synth.
+            </p> -->
+            <div class="customdisplay">
+              <div class="topper d-flex">
+                <h3 class="mx-4 mb-3 mt-5" style="color: Black">
+                  Available products
+                </h3>
+                <input
+                  type="text"
+                  placeholder="Search"
+                  [(ngModel)]="searchText"
+                />
+              </div>
+              <hr />
+              <table class="table mx-3" *ngIf="products && products.length > 0">
+                <thead class="thead-dark">
+                  <tr>
+                    <th style="color: white;font-size: 13px;">ProductName</th>
+                    <th style="color: white;font-size: 13px;">Quantity</th>
+                    <th style="color: white;font-size: 13px;">CP</th>
+                    <th style="color: white;font-size: 13px;">SP</th>
+                    <th style="color: white;font-size: 13px;">PM</th>
+                    <th style="color: white;font-size: 13px;">Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    *ngFor="
+                      let Products of products
+                        | paginate:  { itemsPerPage: 6, currentPage: p, id: '3' }
+                        | filter: searchText
+                    "
+                  >
+                    <!-- <th style="color: green">{{ Products.id }}</th> -->
+                    <th>{{ Products.productName }}</th>
+                    <th>{{ Products.quantity }}</th>
+                    <th>{{ Products.costPrice }}</th>
+                    <th>{{ Products.sellPrice }}</th>
+                    <th>{{ Products.margin }}</th>
+                    <th
+                      [ngClass]="Products.category"
+                    >
+                      {{ Products.category }}
+                    </th>
+                    <th>
+                      <a
+                        [routerLink]="[
+                          '/productlog',
+                          'updateproduct',
+                          Products.id
+                        ]"
+                        >Modify</a
+                      >
+                    </th>
+                    <!-- <th>
+                      <a
+                        [routerLink]="[
+                          '/productlog',
+                          'updateproduct',
+                          Products.id
+                        ]"
+                        >Delete</a
+                      >
+                    </th> -->
+                  </tr>
+                </tbody>
+              </table>
+              <p *ngIf="!products || products.length <= 0">No product found</p>
+              <!-- pagination function -->
+
+              <pagination-controls id="3"
+                (pageChange)="p = $event"
+              ></pagination-controls>
+            </div>
+          </div>
+          <!-- END OF PRODUCT SECTION -->
+          <!-- START OF SUPPLIER SECTION -->
+          <div class="tab-pane fade" id="profile2">
+            <div class="customdisplay">
+              <h5 class="mx-4 mb-3 mt-2" style="color: red">SUPPLIERS</h5>
+              <hr />
+              <table class="table mx-3" *ngIf="products && products.length > 0">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>Product Name</th>
+                    <th>Company</th>
+                    <th>Email</th>
+                    <th>phoneNumber</th>
+                    <th>Category</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let Products of products">
+                    <th>{{ Products.productName }}</th>
+                    <th>{{ Products.quantity }}</th>
+                    <th>{{ Products.costPrice }}</th>
+                    <th>{{ Products.sellPrice }}</th>
+                    <th
+                      style="background-color: rgb(111, 166, 177); color: white"
+                    >
+                      {{ Products.category }}
+                    </th>
+                    <th>
+                      <a
+                        [routerLink]="[
+                          '/dashboard',
+                          'updateproduct',
+                          Products.id
+                        ]"
+                        >View</a
+                      >
+                    </th>
+                    <th>
+                      <button
+                         (click)="deleteProduct(productDetails.id)"
+                        >Delete</button>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+              <p *ngIf="!products || products.length <= 0">No product found</p>
+              <!-- pagination function -->
+            </div>
+          </div>
+          <div class="tab-pane fade" id="profile">
+            <h4 class="mt-2">Profile tab content</h4>
+            <p>
+              Vestibulum nec erat eu nulla rhoncus fringilla ut non neque.
+              Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam
+              porttitor condimentum nisi, eu viverra ipsum porta ut. Nam
+              hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean
+              volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc
+              facilisis leo at faucibus adipiscing.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="messages">
+            <h4 class="mt-2">Messages tab content</h4>
+            <p>
+              Donec vel placerat quam, ut euismod risus. Sed a mi suscipit,
+              elementum sem a, hendrerit velit. Donec at erat magna. Sed
+              dignissim orci nec eleifend egestas. Donec eget mi consequat massa
+              vestibulum laoreet. Mauris et ultrices nulla, malesuada volutpat
+              ante. Fusce ut orci lorem. Donec molestie libero in tempus
+              imperdiet. Cum sociis natoque penatibus et magnis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

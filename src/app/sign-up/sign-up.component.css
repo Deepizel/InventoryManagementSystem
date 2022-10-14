@@ -1,0 +1,77 @@
+@import url('http://fonts.cdnfonts.com/css/diagramm');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    overflow-y: hidden;
+}
+
+.jingle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* background-color: rgb(120, 116, 116);tran
+    z-index: 5; */
+
+}
+
+.formcrate{
+    border: 1px solid white;
+    height: 600px;
+    width: 350px;
+    /* margin-left: 70%; */
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+small{
+    margin-left: 20px;
+}
+.signup{
+    height: 690px;
+}
+
+input{
+    width: 300px;
+    height: 50px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    align-self: center;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 12px 20px;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+  background-color: lightblue;
+}
+
+button{
+    width: 300px;
+    height: 50px;
+    background-color: rgb(7, 132, 90);
+    border: none;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-family: 'Diagramm', sans-serif;
+    font-weight: 500;
+}
+
+button:hover{
+    background-color: green;
+}
+
+#agreement{
+ height: 20px;
+ margin-left: -90px;
+}
+label{
+    font-size: small;
+}
+
+
+@media (max-width: 780px) {
+  
+}
