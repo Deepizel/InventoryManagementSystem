@@ -30,7 +30,13 @@ export class LoginpageComponent implements OnInit {
       id: 0,
     },
   };
-  
+  isLoading = false;
+
+  toggleLoading = () =>{
+    this.isLoading = true;
+  }
+  // let buttonChange = document.getElementById(#btn);
+  // addEventListener.buttonChange
   // loginUserRequest: Login = {} as Login;
 
   loginForm!: FormGroup;
@@ -124,7 +130,7 @@ export class LoginpageComponent implements OnInit {
   //     this.alert = false;
   //   }
   // }
-
+ 
   onSubmit() {
     if (this.loginForm.valid) {
       console.log(this.loginForm.value);

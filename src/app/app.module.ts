@@ -29,6 +29,16 @@ import { SupplierComponent } from './supplier/supplier.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { UserLogsComponent } from './user-logs/user-logs.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { StaffDashboardComponent } from './staff-dashboard/staff-dashboard.component';
+import { StaffSidebarComponent } from './staff-sidebar/staff-sidebar.component';
+import { AddStaffComponent } from './add-staff/add-staff.component';
+import { StaffproductlogComponent } from './staffproductlog/staffproductlog.component';
+import { StaffposComponent } from './staffpos/staffpos.component';
+import { StaffLoginComponent } from './staff-login/staff-login.component';
+import { ActivitylogComponent } from './activitylog/activitylog.component';
+import { AuditComponent } from './audit/audit.component';
+import { OffcanvasComponent } from './offcanvas/offcanvas.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +63,16 @@ import { UserLogsComponent } from './user-logs/user-logs.component';
     LandingpageComponent,
     SupplierComponent,
     UserLogsComponent,
+    SidebarComponent,
+    StaffDashboardComponent,
+    StaffSidebarComponent,
+    AddStaffComponent,
+    StaffproductlogComponent,
+    StaffposComponent,
+    StaffLoginComponent,
+    ActivitylogComponent,
+    AuditComponent,
+    OffcanvasComponent,
   ],
   imports: [
     Ng2SearchPipeModule,

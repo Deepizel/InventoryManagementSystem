@@ -6,10 +6,22 @@
     /* overflow-x: hidden; */
 }
 
+.wrapper h3{
+    margin-left: 100px;
+}
 #navbarVertical{
     background-color: #112A48;
 }
 
+form{
+    margin: 0px 0px 0px 0px;
+}
+
+form h3{
+    position: relative;
+    left: -10%;
+    margin-top: 30px;
+}
 .nav-item:hover, .nav-link:hover{
 background-color: white!important;
 color: #112A48!important;
@@ -62,8 +74,6 @@ color: #112A48!important;
 }
 
 .listproduct{
-    padding: 0px 0px;
-    margin-left: -400px;
     margin-top: 20px;
 }
 
@@ -79,7 +89,6 @@ form{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     height: 530px;
     width: 330px;
-    margin-left: 480px;
 }
 
 .formarea{

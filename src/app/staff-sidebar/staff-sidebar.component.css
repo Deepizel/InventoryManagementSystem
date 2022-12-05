@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+.links img {
+    height: 20px;
+}
+.links a {
+    margin-top: 0px;
+    text-decoration: none;
+    margin-left: 15px;
+    color: white;
+}
+.container-fluid{
+    height: 90vh;
+    width: 250px;
+    margin-top: 20px;
+    margin-left: 30px;
+    border-radius: 10px;
+    position: fixed;
+}
+
+.sidebar{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.links{
+    margin-bottom: 10px;
+    /* margin-left: 5px; */
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.links:hover{
+    background-color: rgb(156, 77, 77);
+}
+
+.links:active{
+    background-color: bisque;
+}
+
+.logobit h2 {
+    margin-left: 1em;
+    /* margin-top: 40px; */
+    font-family: 'Monoton', cursive;
+    font-size: 30px;
+}
+
+.downlog img {
+    height: 30px;
+}
+
+.downlog a {
+    margin-left: 17px;
+    text-decoration: none;
+    color: white;
+}

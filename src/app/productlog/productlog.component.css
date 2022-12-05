@@ -1,4 +1,4 @@
-body{
+*{
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -29,7 +29,7 @@ input{
 }
 
 .Unavailable {
-color: rgb(133, 202, 14)
+color: rgb(167, 14, 202)
 }
 
 .Low{
@@ -41,7 +41,7 @@ color: rgb(133, 202, 14)
 }
 
 .Discontinued{
-  color: darkslategray;
+  color: rgb(8, 26, 26);
 }
 
 table{
@@ -52,7 +52,11 @@ table{
 }
 
 tr:hover {background-color: coral;}
-thead {
-  background-color: #04AA6D;
+thead th{
+  background-color: #484c7f;
   color: white;
+}
+
+th{
+  color: black; font-size: 13px
 }

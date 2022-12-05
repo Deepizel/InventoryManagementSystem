@@ -1,0 +1,281 @@
+<div class="container-fluid">
+  <div class="row mt-4">
+    <div class="logo">
+      <img id="zenithlog" src="../../assets/Zenith.svg" alt="zenith logo" />
+      <img src="../../assets/RIA.svg" alt="Ria logo" />
+    </div>
+  </div>
+
+  <a id="previous" routerLink="/landingpage"> < Back</a>
+
+  <div class="row auditform">
+    <div class="form">
+      <ul class="nav nav-tabs" id="myTab">
+        <li class="nav-item">
+          <a href="#home" class="nav-link active" data-bs-toggle="tab"
+            >Payment option</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#profile" class="nav-link" data-bs-toggle="tab"
+            >Post Transaction Details</a
+          >
+        </li>
+      </ul>
+      <!-- content -->
+      <!-- <div class="tab-content">
+        <div class="tab-pane fade show active" id="home">
+          <p>ljgndfm,asd</p>
+        </div>
+      </div> -->
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="home">
+          <form action="submit">
+            <div class="topsection d-flex">
+              <div class="DaS">
+                <p>Debit Account Information</p>
+                <div class="split d-flex">
+                  <div class="duo">
+                    <label class="accttype" for="account">Account Type</label>
+                    <select name="account" id="account">
+                      <option value="Current">CA</option>
+                      <option value="savings">SV</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                  <div class="duo mx-3">
+                    <label class="accttype" for="">Account number</label>
+                    <input type="text" id="accountNumber" />
+                  </div>
+                </div>
+                <div class="split d-flex">
+                  <div class="duo mx-4">
+                    <label class="accttype" for="currency">Currency</label>
+                    <input type="text" id="currency" 0 />
+                  </div>
+                  <div class="duo mx-3">
+                    <label class="accttype" for="Account number"
+                      >Account name</label
+                    >
+                    <select name="" id="">
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="split d-flex">
+                  <div class="duo">
+                    <label class="accttype" for="account">Account status</label>
+                    <select name="account" id="account">
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                  <div class="duo mx-3">
+                    <label class="accttype" for="Account number"
+                      >Available balance</label
+                    >
+                    <select name="" id="">
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                </div>
+                <label class="accttype" for="">Narration</label>
+                <input type="text" />
+                <!-- <div class="split">
+                    <div class="duo">
+
+                    </div>
+                    <div class="duo">
+
+                    </div>
+                </div> -->
+              </div>
+              <div class="CaS">
+                <p>Debit Account Information</p>
+                <div class="split d-flex">
+                  <div class="duo">
+                    <label class="accttype" id="accttype" for="account"
+                      >Account Type</label
+                    >
+                    <select name="account" id="account">
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                  <div class="duo mx-3">
+                    <label class="accttype" id="accttype1" for="Account number"
+                      >Account number</label
+                    >
+                    <select name="" id="">
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="split d-flex">
+                  <div class="duo">
+                    <label class="accttype" id="accttype2" for="account"
+                      >Currency</label
+                    >
+                    <select name="account" id="account">
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                  <div class="duo mx-3">
+                    <label class="accttype" id="accttype3" for="Account number"
+                      >Account number</label
+                    >
+                    <select name="" id="">
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="split d-flex">
+                  <div class="duo">
+                    <label class="accttype" id="accttype4" for="account"
+                      >Account status k</label
+                    >
+                    <select name="account" id="account">
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                  <div class="mx-3">
+                    <label class="accttype" id="accttype5" for="Account number"
+                      >Account number</label
+                    >
+                    <select name="" id="">
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                </div>
+                <label class="accttype" for="">Narration</label>
+                <input type="text" />
+                <!-- <div class="split">
+                    <div class="duo">
+
+                    </div>
+                    <div class="duo">
+
+                    </div>
+                </div> -->
+              </div>
+            </div>
+            <div class="Otd">
+              <p>Other Transaction Details</p>
+              <div class="split rxx d-flex mb-1 mt-2">
+                <div class="tramt">
+                  <label for="">Transaction Amount</label>
+                  <input type="text" />
+                </div>
+                <div class="Datetime">
+                  <label for="">Transaction Date</label>
+                  <input type="datetime" />
+                </div>
+                <div class="tramt">
+                  <label for="">Error Code</label>
+                  <input type="text" />
+                </div>
+              </div>
+              <div class="error mx-4">
+                <label for="">Error Narration</label>
+                <input type="text" />
+              </div>
+            </div>
+            <div class="Otd">
+              <p>Audit Trail</p>
+              <div class="split rxx d-flex mb-1 mt-2">
+                <div class="tramt">
+                  <label class="accttype" for="">Posted by</label>
+                  <input type="text" />
+                </div>
+                <div class="Datetime">
+                  <label class="accttype" for="">Origin branch</label>
+                  <input type="text" />
+                </div>
+                <div class="tramt">
+                  <label class="accttype" for="">Authorizer</label>
+                  <input type="text" />
+                </div>
+              </div>
+              <div class="tramt">
+                <label class="accttype" for="">Posted by</label>
+                <input type="text" />
+              </div>
+              <div class="Datetime">
+                <label class="accttype" for="">Origin branch</label>
+                <input type="text" />
+              </div>
+              <div class="tramt">
+                <label class="accttype" for="">Authorizer</label>
+                <input type="text" />
+              </div>
+            </div>
+
+            <div class="buttonAction">
+              <button id="reject">Reject</button>
+              <button id="approve">Approve</button>
+            </div>
+          </form>
+        </div>
+        <div class="tab-pane fade" id="profile2">
+          <h4 class="mt-2">Profile tab content2222</h4>
+          <p>
+            Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus
+            nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor
+            condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum
+            turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed
+            consequat ante in rutrum convallis. Nunc facilisis leo at faucibus
+            adipiscing.
+          </p>
+        </div>
+        <div class="tab-pane fade" id="profile">
+          <h4 class="mt-2">Profile tab content</h4>
+          <p>
+            Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus
+            nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor
+            condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum
+            turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed
+            consequat ante in rutrum convallis. Nunc facilisis leo at faucibus
+            adipiscing.
+          </p>
+        </div>
+        <div class="tab-pane fade" id="messages">
+          <h4 class="mt-2">Messages tab content</h4>
+          <p>
+            Donec vel placerat quam, ut euismod risus. Sed a mi suscipit,
+            elementum sem a, hendrerit velit. Donec at erat magna. Sed dignissim
+            orci nec eleifend egestas. Donec eget mi consequat massa vestibulum
+            laoreet. Mauris et ultrices nulla, malesuada volutpat ante. Fusce ut
+            orci lorem. Donec molestie libero in tempus imperdiet. Cum sociis
+            natoque penatibus et magnis.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,17 +1,21 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-lg-2">
-      <app-sidenav></app-sidenav>
+    <div class="col-md-0 col-sm-0 col-lg-3 col-xl-2">
+      <app-sidebar></app-sidebar>
     </div>
-    <div class="col-lg-9 mx-2">
+    <div class="col-lg-9 mt-5 mx-5">
       <div class="row toplid">
-        <div class="reportcard">
+        <app-offcanvas></app-offcanvas>
+        <div class="toploader">
+          
+        </div>
+        <div class="reportcard d-flex">
           <div class="greeting">
             <h3>
               <span style="color: rgb(123, 209, 207)"
-                >Hello {{ user.firstName }},</span
+                >Hi {{ user.firstName }},</span
               >
-              Good morning!
+              {{greetings()}}
             </h3>
             <p style="color: black">
               This section gives you a general scope of your inventory
@@ -19,17 +23,26 @@
             </p>
             <p style="color: Green">Here's an overview of your Inventory</p>
           </div>
+          <div class="profie d-flex mx-2 mt-4">
+            <div class="useradmin">
+              <p>{{ user.firstName }} {{ user.lastName }}</p>
+              <small>Admin Profile</small>
+            </div>
+            <img id="avatar" src="../../assets/profile_av.png" alt="">
+          </div>
         </div>
+          <hr>
       </div>
+    
       <!-- start of card report section -->
       <div class="row">
-        <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+         <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
           <div class="reportdetails report mx-3 mt-3 d-flex">
-            <img src="../../assets/box1.svg" alt="" srcset="">
+            <img src="" alt="" srcset="">
             <p style="font-size: 16px; font-weight: bolder">
               
-              <span style="font-size: 20px; font-weight: bolder">
-               Total Units:{{ products.length }}
+              <span style="font-size: 20px;color: white; font-weight: bolder;background-color:rgb(72,76,127);">
+               Total Units: <br> {{ products.length }}
               </span>
             </p>
           </div>
@@ -37,29 +50,29 @@
 
         <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
           <div class="reportdetails report mt-3 mx-3 d-flex">
-       <img src="../../assets/box1.svg" alt="" srcset="">
+       <img src="" alt="" srcset="">
             <p style="font-size: 16px; font-weight: bolder">
               
-              <span style="font-size: 20px; font-weight: bolder">
-               Total Units:{{ products.length }}
+              <span style="font-size: 20px;color: white; font-weight: bolder;background-color:rgb(72,76,127);">
+               Total Units: <br> {{ products.length }}
               </span>
             </p>
           </div>
         </div>
         <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
           <div class="reportdetails report mt-3 mx-3 d-flex">
-            <img src="../../assets/layers-half.svg" alt="" srcset="">
-            <p style="font-size: 16px; font-weight: bolder">Products on pause<br>Units:0</p>
+            <img src="" alt="" srcset="">
+            <p style="font-size: 16px;color: white; font-weight: bolder;background-color: rgb(72,76,127);">Products on pause:<br>0</p>
           </div>
         </div>
 
         <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
           <div class="reportdetails report mx-3 mt-3 d-flex">
-            <img src="../../assets/box1.svg" alt="" srcset="">
-            <p style="font-size: 16px; font-weight: bolder">
-              Products
-              <span style="font-size: 20px; font-weight: bolder">
-                Units:{{ products.length }}
+            <img src="" alt="" srcset="">
+            <p style="font-size: 16px; color: white; font-weight: bolder;background-color:rgb(72,76,127);">
+              Last Updated
+              <span style="font-size: 20px;color: white; font-weight: bolder;background-color:rgb(72,76,127);">
+                on: <br> {{ products.length }}
               </span>
             </p>
           </div>
@@ -68,25 +81,81 @@
 
       <!-- end of card report section -->
       <section class="mt-3">
-        <div class="row mink mx-3">
-          <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6 sales-history">
-            <h4 class="mt-4 mx-4" style="font-family: 'Lato', sans-serif">
+        <div class="row mink">
+          <div
+            class="col-lg-12 updatesection d-flex"
+          >
+             <!-- <h5
+              class="mt-2"
+              style="
+                font-family: 'Lato', sans-serif;
+                display: flex;
+                justify-content: center;
+              "
+            >
+              Status Analytics
+            </h5> --> 
+              <hr /> 
+             <!-- <apx-chart
+              [series]="chartSeries"
+              [chart]="chartDetails"
+              [labels]="chartLabels"
+              [title]="chartTitle"
+            ></apx-chart> -->
+            <div class="content d-flex">
+              <p>
+                <span>{{ user.firstName }} {{ user.lastName }}</span> <br />
+                Welcome back {{ user.firstName }} {{ user.lastName }}. <br />
+                Here's an overview of your <br />
+                inventory management portal. <br />You can add products, view
+                existing <br />
+                products in your database <br />
+                or should the need arise <br />
+                update them.
+                <br>
+                Get started by <br>
+                <span style="color: blue;" routerLink="/addproduct"> adding an Item</span>
+              </p>
+
+              <img id="imgx" src="../../assets/taskImg.svg" alt="" />
+            </div>
+          </div>
+
+          <!-- <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6 sales-history">
+            <h5
+              class="mt-3 mx-4"
+              style="
+                font-family: 'Lato', sans-serif;
+                display: flex;
+                justify-content: center;
+              "
+            >
               Your most Recent Updates
-            </h4><hr>
+            </h5>
+            <hr />
             <ul>
               <li *ngFor="let product of products">
-                <span style="color:black;">{{ product.productName }}</span> - was updated on <span style="color: red;">{{ product.updatedOn }}</span>
+                <span style="color: black">{{ product.productName }}</span> -
+                was updated on
+                <span
+                  style="
+                    color: red;
+                    font-family: Cambria, Cochin, Georgia, Times,
+                      'Times New Roman', serif;
+                  "
+                  >{{ product.updatedOn }}</span
+                >
               </li>
             </ul>
             <hr />
-          </div>
-          <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6 updatesection">
-            <h3 class="mt-2" style="font-family: 'Lato', sans-serif">
-              Overview
-            </h3>
+          </div> -->
+          <!-- <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6 updatesection">
+            <h5 class="mt-2" style="font-family: 'Lato', sans-serif; display: flex; justify-content: center;">
+              Status Analytics
+            </h5>
             <hr />
             <apx-chart [series]="chartSeries" [chart]="chartDetails" [labels]="chartLabels" [title]="chartTitle"></apx-chart>
-          </div>
+          </div> -->
         </div>
       </section>
     </div>

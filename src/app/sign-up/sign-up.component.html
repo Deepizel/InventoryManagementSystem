@@ -10,7 +10,7 @@
         <div class="formcrate">
           <h3 class="text-center mt-3 mb-3">CREATE AN ACCOUNT</h3>
 
-          <form [formGroup]="signupForm" (submit)="addUser()">
+          <form [formGroup]="signupForm" (ngSubmit)="addUser()">
             <input formControlName="firstname" type="text" placeholder="first Name" [(ngModel)]="addUserRequest.firstName"/><br />
              <small
               *ngIf="
@@ -58,7 +58,7 @@
             >
             <!-- <input type="password" placeholder="Repeat your password" /> <br /> -->
             <!-- <p style="font-size:smaller; margin-left: 50px;">I agree to all statements in terms and conditions</p> -->
-            <button type="submit" (click)="alertWithSuccess()" routerLink="/login">REGISTER</button>
+            <button type="submit" (click)="alertWithSuccess()">REGISTER</button>
             <p class="mt-2" style="margin-left:60px;">Already have an account?<a routerLink="/login">Login here</a></p>
           </form>
         </div>

@@ -1,6 +1,6 @@
 <div class="row">
-  <div class="col-lg-2">
-    <app-sidenav></app-sidenav>
+  <div class="col-lg-3">
+    <app-sidebar></app-sidebar>
   </div>
   <div class="col-lg-8">
     <section>
@@ -11,22 +11,24 @@
         <ul class="nav nav-tabs" id="myTab">
           <li class="nav-item">
             <a href="#home" class="nav-link active" data-bs-toggle="tab"
-              >Home</a
+              >Products</a
             >
           </li>
-          <li class="nav-item">
-            <a href="#profile" class="nav-link" data-bs-toggle="tab">Profile</a>
+           <li class="nav-item">
+            <a href="#profile" class="nav-link" data-bs-toggle="tab"
+              >Sales log</a
+            >
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#profile2" class="nav-link" data-bs-toggle="tab"
-              >Profile</a
+              >Recent Updates</a
             >
           </li>
           <li class="nav-item">
             <a href="#messages" class="nav-link" data-bs-toggle="tab"
-              >Messages</a
+              >Suppliers</a
             >
-          </li>
+          </li>  -->
         </ul>
         <div class="tab-content">
           <div class="tab-pane fade show active" id="home">
@@ -41,7 +43,7 @@
             </p> -->
             <div class="customdisplay">
               <div class="topper d-flex">
-                <h3 class="mx-4 mb-3 mt-5" style="color: Black">
+                <h3 class="mx-4 mb-3 mt-2" style="color: Black">
                   Available products
                 </h3>
                 <input
@@ -52,14 +54,14 @@
               </div>
               <hr />
               <table class="table mx-3" *ngIf="products && products.length > 0">
-                <thead class="thead-dark">
+                <thead>
                   <tr>
-                    <th style="color: white;font-size: 13px;">ProductName</th>
-                    <th style="color: white;font-size: 13px;">Quantity</th>
-                    <th style="color: white;font-size: 13px;">CP</th>
-                    <th style="color: white;font-size: 13px;">SP</th>
-                    <th style="color: white;font-size: 13px;">PM</th>
-                    <th style="color: white;font-size: 13px;">Status</th>
+                    <th>ProductName</th>
+                    <th>Quantity</th>
+                    <th>CP</th>
+                    <th>SP</th>
+                    <th>PM</th>
+                    <th>Status</th>
                     <th></th>
                   </tr>
                 </thead>
@@ -67,7 +69,7 @@
                   <tr
                     *ngFor="
                       let Products of products
-                        | paginate:  { itemsPerPage: 6, currentPage: p, id: '3' }
+                        | paginate: { itemsPerPage: 10, currentPage: p, id: '3' }
                         | filter: searchText
                     "
                   >
@@ -77,9 +79,7 @@
                     <th>{{ Products.costPrice }}</th>
                     <th>{{ Products.sellPrice }}</th>
                     <th>{{ Products.margin }}</th>
-                    <th
-                      [ngClass]="Products.category"
-                    >
+                    <th [ngClass]="Products.category">
                       {{ Products.category }}
                     </th>
                     <th>
@@ -108,7 +108,8 @@
               <p *ngIf="!products || products.length <= 0">No product found</p>
               <!-- pagination function -->
 
-              <pagination-controls id="3"
+              <pagination-controls
+                id="3"
                 (pageChange)="p = $event"
               ></pagination-controls>
             </div>
@@ -152,9 +153,9 @@
                       >
                     </th>
                     <th>
-                      <button
-                         (click)="deleteProduct(productDetails.id)"
-                        >Delete</button>
+                      <button (click)="deleteProduct(productDetails.id)">
+                        Delete
+                      </button>
                     </th>
                   </tr>
                 </tbody>
@@ -164,15 +165,78 @@
             </div>
           </div>
           <div class="tab-pane fade" id="profile">
-            <h4 class="mt-2">Profile tab content</h4>
-            <p>
-              Vestibulum nec erat eu nulla rhoncus fringilla ut non neque.
-              Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam
-              porttitor condimentum nisi, eu viverra ipsum porta ut. Nam
-              hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean
-              volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc
-              facilisis leo at faucibus adipiscing.
-            </p>
+             <div class="customdisplay">
+              <div class="topper d-flex">
+                <h3 class="mx-4 mb-3 mt-5" style="color: Black">
+                  Sales History
+                </h3>
+                <input
+                  type="text"
+                  placeholder="Search"
+                  [(ngModel)]="searchText"
+                />
+              </div>
+              <hr />
+              <table class="table mx-3" *ngIf="sales && sales.length > 0">
+                <thead>
+                  <tr>
+                    <th>ProductName</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Instock</th>
+                    <th>Total amount</th>
+                    <th>Time</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    *ngFor="
+                      let sales of sales
+                        | paginate: { itemsPerPage: 6, currentPage: p, id: '3' }
+                        | filter: searchText
+                    "
+                  >
+                    <!-- <th style="color: green">{{ Products.id }}</th> -->
+                    <th>{{ sales.productName }}</th>
+                    <th>{{ sales.quantity }}</th>
+                    <th>{{ sales.price }}</th>
+                    <th>{{ sales.instock }}</th>
+                    <th>{{ sales.totalPrice }}</th>
+                    <th>
+                      {{ sales.updatedOn }}
+                    </th>
+                    <!-- <th>
+                      <a
+                        [routerLink]="[
+                          '/productlog',
+                          'updateproduct',
+                          Products.id
+                        ]"
+                        >Modify</a
+                      >
+                    </th> -->
+                    <!-- <th>
+                      <a
+                        [routerLink]="[
+                          '/productlog',
+                          'updateproduct',
+                          Products.id
+                        ]"
+                        >Delete</a
+                      >
+                    </th> -->
+                  </tr>
+                </tbody>
+              </table>
+              <p *ngIf="!products || products.length <= 0">No product found</p>
+              <!-- pagination function -->
+
+              <pagination-controls
+                id="3"
+                (pageChange)="p = $event"
+              ></pagination-controls>
+            </div>
           </div>
           <div class="tab-pane fade" id="messages">
             <h4 class="mt-2">Messages tab content</h4>

@@ -13,16 +13,16 @@ input{
 
 form{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    height: 530px;
+    height: 600px;
     width: 330px;
-    margin-left: 40px;
+    margin-left: 90px;
 }
 
 h2{
     /* display: flex;
     justify-content: center; */
     margin-top: 40px;
-    margin-left: 100px;
+    margin-left: 20px;
 }
 
 .btn{

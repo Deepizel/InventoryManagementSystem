@@ -1,17 +1,20 @@
 body {
   background-color: aliceblue;
 }
-.formcard {
+
+.container-fluid{
+  padding:0px 0px
+}
+/* .formcard {
   height: 100px;
   width: 95%;
   border: 1px solid red;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: antiquewhite;
+} */
+.prodSell label{
+  margin-left: 50%;
 }
-
-.clientdetails {
-}
-
 #userinfo {
   margin-left: 20px;
   width: 250px;
@@ -128,4 +131,9 @@ th {
   position: relative;
   width: 100px;
   left: 500%;
+}
+
+.col-lg-9{
+  background-color: 
+#fafafa;
 }

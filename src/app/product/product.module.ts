@@ -9,5 +9,16 @@ export interface Products {
   category: string;
   updatedOn: any;
   totalAmount: number;
-  quantityNumber:number;
+  quantityNumber: number;
+}
+
+export interface Sales {
+  data: any;
+  id: number;
+  productName: string;
+  quantity: number;
+  Price: number;
+  Instock: number;
+  totalAmount: number;
+  updatedOn: any;
 }

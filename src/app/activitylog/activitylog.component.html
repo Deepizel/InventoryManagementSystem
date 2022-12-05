@@ -1,0 +1,82 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-lg-9 mt-3">
+      <div class="row"></div>
+
+      <!-- end of card report section -->
+      <section class="">
+        <div class="row mink">
+          <div class="col-md-12 col-sm-12 col-lg-6 col-xl-6 sales-history">
+            <div class="history">
+              <!-- <div class="cards">
+                <p>Product: <span>{{ product.productName}}</span></p>
+              </div> -->
+              <h5
+                class="mx-4 mt-1"
+                style="
+                  font-family: Cambria, Cochin, Georgia, Times,
+                    'Times New Roman', serif;
+                  font-weight: 600;
+                  display: flex;
+                  justify-content: center;color: blue;
+                "
+              >
+                Your most Recent Updates
+              </h5>
+              <hr />
+                <table class="table mx-3" *ngIf="products && products.length > 0">
+                <thead>
+                  <tr>
+                    <th>ProductName</th>
+                    <th> Activity</th>
+                    <th></th>
+                    <th>Date-time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    *ngFor="
+                      let Products of products
+                        | paginate: { itemsPerPage: 6, currentPage: p, id: '3' }
+                        | filter: searchText
+                    "
+                  >
+                    <!-- <th style="color: green">{{ Products.id }}</th> -->
+                    <th>{{ Products.productName }}</th>
+                    <th>was last updated</th>
+                    <th></th>
+                    <th>{{ Products.updatedOn }}</th>
+                    <th>
+                      
+                    </th>
+                    <!-- <th>
+                      <a
+                        [routerLink]="[
+                          '/productlog',
+                          'updateproduct',
+                          Products.id
+                        ]"
+                        >Delete</a
+                      >
+                    </th> -->
+                  </tr>
+                </tbody>
+              </table>
+              <p *ngIf="!products || products.length <= 0">No product found</p>
+              <!-- pagination function -->
+
+              <pagination-controls
+                id="3"
+                (pageChange)="p = $event"
+              ></pagination-controls>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

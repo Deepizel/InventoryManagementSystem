@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+* {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden !important;
+  background-color: rgb(247, 245, 245);
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+#previous {
+  text-decoration: none;
+  font-size: 12px;
+  color: black;
+  margin-left: 115px;
+  margin-top: 30px;
+}
+.logo {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30;
+  /* margin-left: 20px; */
+}
+.accttype{
+    position: relative;
+    top: 10px;
+}
+#zenithlog {
+  margin-left: 110px;
+}
+
+.auditform{
+    height: 90vh;
+}
+.form {
+  margin-top: 20px;
+  margin-left: 110px;
+  width: 1350px;
+}
+
+.nav-item {
+  width: 40%;
+  /* border-radius: 10px 0px 0px ; */
+  border: 1px solid grey;
+}
+
+.nav-item,
+a::selection {
+  background-color: #ff6100;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-item a {
+  display: flex;
+  justify-content: center;
+  color: grey;
+  font-size: 13px;
+  font-family: 'Inter', sans-serif;
+  height: 25px;
+}
+select {
+  width: 120px;
+  border: 1px solid #f1d3b4;
+  border-radius: 5px;
+  font-size: 13px;
+  height: 30px;
+  background-color: white;
+}
+.topsection {
+  margin-top: 10px;
+}
+
+.DaS {
+  width: 40%;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.DaS p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.DaS label {
+  margin-left: 10px;
+  font-size: 13px;
+  color: grey;
+  margin-bottom: 5px;
+}
+
+.DaS select {
+  margin-left: 10px;
+}
+
+.DaS input {
+  width: 80px;
+  border: 1px solid grey;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid #f1d3b4;
+}
+.CaS {
+  width: 40%;
+  border: 1px solid grey;
+  border-radius: 8px;
+}
+.CaS p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.CaS label {
+  margin-left: 10px;
+  font-size: 13px;
+  color: grey;
+  margin-bottom: 5px;
+}
+
+.CaS select {
+  margin-left: 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+.CaS input {
+  width: 350px;
+  border: 1px solid grey;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid #f1d3b4;
+  font-family: 'Inter', sans-serif;
+}
+
+.Otd {
+  border: 1px solid grey;
+  height: 110px;
+  width: 80%;
+  border-radius: 5px;
+}
+
+.rxx {
+  justify-content: space-around;
+}
+
+.Otd p {
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+
+.Otd label {
+  font-size: 13px;
+  color: grey;
+  margin-bottom: 5px;
+}
+
+.Otd input {
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #f1d3b4;
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+}
+
+.error input {
+  width: 900px;
+  border: 1px solid #f1d3b4;
+  background-color: white;
+}
+.buttonAction {
+  margin-top: 30px;
+}
+button {
+  width: 180px;
+  background-color: white;
+  border: 1px solid #f9b978;
+  color: #f1d3b4;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+}
+#approve {
+  margin-left: 20px;
+}
+button:hover {
+  background-color: #ff6100;
+  color: white;
+}

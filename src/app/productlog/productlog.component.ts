@@ -3,6 +3,7 @@ import { Products } from '../product/product.module';
 import { ProductsService } from '../Services/products.service';
 import Swal from 'sweetalert2';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Sale } from '../sale/sale.module';
 
 @Component({
   selector: 'app-productlog',
@@ -15,6 +16,7 @@ export class ProductlogComponent implements OnInit {
   p: number = 1;
   collection!: any[];
   products: Products[] = [];
+  sales: Sale[] = [];
 
   productDetails: Products = {
     id: 0,
@@ -29,6 +31,17 @@ export class ProductlogComponent implements OnInit {
     totalAmount: 0,
     quantityNumber: 0,
   };
+ saleHistory : Sale ={
+  data:"",
+  id: 0,
+  productName: "",
+  quantity: 0,
+  inStock: 0,
+  Price: 0,
+  totalPrice: 0,
+  sellPrice: 0,
+  updatedOn: ""
+  }
 
   constructor(
     private productsService: ProductsService,
@@ -56,6 +69,25 @@ export class ProductlogComponent implements OnInit {
         },
       });
     });
+     this.productsService.getSales().subscribe((res: { data: any }) => {
+       this.sales = res.data;
+       console.log(res.data);
+       this.page = 5;
+
+      //  this.route.paramMap.subscribe({
+      //    next: (params: { get: (arg0: string) => any }) => {
+      //      const id: any = params.get('id');
+      //      if (id) {
+      //        this.productsService.getSal(id).subscribe({
+      //          next: (response) => {
+      //            this.productDetails = response;
+      //            this.page = 5;
+      //          },
+      //        });
+      //      }
+      //    },
+      //  });
+     });
   }
 
   updateProduct() {
@@ -67,7 +99,17 @@ export class ProductlogComponent implements OnInit {
         },
       });
   }
+  onEditClicked(id: number) {
+    //Gets the product based on id
+    let currentProduct = this.products.find((p) => {
+      return p.id === id;
+    });
 
+    //Populate the form with details
+    // this.form.setValue({
+
+    // })
+  }
   deleteProduct(id: number) {
     this.productsService.deleteProduct(id).subscribe({
       next: (response) => {

@@ -1,0 +1,58 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#staffz {
+  height: 200px;
+}
+
+button{
+  width: 160px;
+  height: 30px;
+  background-color: grey;
+}
+/* 
+img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  margin-top: 20px;
+} */
+.col-lg-9{
+  border-right: 1px solid grey;
+}
+.tips{
+ height: 50px;
+ display: flex;
+ justify-content: end;
+ /* width: 250px; */
+ /* margin-left: 100px; */
+ border-left: 1px solid rgb(200, 197, 197);
+ font-size: 14px;
+ /* box-shadow: rgba(62, 59, 59, 0.24) 0px 3px 8px; */
+}
+
+#tipss{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.monk {
+  height: 300px;
+  width: 800px;
+  padding: 40px;
+  margin-top: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.indicators {
+  height: 80px;
+  width: 180px;
+  background-color: aqua;
+  box-shadow: rgba(62, 59, 59, 0.24) 0px 3px 8px;
+}
+.wrapper {
+  margin: 0px;
+  padding: 0px;
+}

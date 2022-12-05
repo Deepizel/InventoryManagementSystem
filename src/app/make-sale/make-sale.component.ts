@@ -1,7 +1,9 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Products } from '../product/product.module';
 import { ProductsService } from '../Services/products.service';
+import { Sale } from '../sale/sale.module';
 
 @Component({
   selector: 'app-make-sale',
@@ -60,8 +62,8 @@ export class MakeSaleComponent implements OnInit {
     });
   }
 
-  addCartItem(id: number, quantityNumber: number) {
-    if (quantityNumber > 0) {
+  addCartItem(id: number, quantityNumber: number, inStockNumber: number) {
+    if (quantityNumber > 0 && quantityNumber <= inStockNumber) {
       if (this.cartItems.filter((x) => x.id === id).length > 0) {
         let item = this.cartItems.filter((x) => x.id === id)[0];
         item.quantityNumber++;
@@ -90,6 +92,8 @@ export class MakeSaleComponent implements OnInit {
       }
 
       console.log(this.cartItems);
+    } else {
+      alert('Invalid quantity');
     }
   }
 
@@ -99,5 +103,19 @@ export class MakeSaleComponent implements OnInit {
     this.cartItemsTotal = this.cartItems
       .map((x) => x.totalAmount)
       .reduce((acc, curr) => acc + curr, 0);
+  }
+
+  makeSale() {
+    console.log(this.cartItems);
+    this.cartItems.forEach((element: any) => {
+      console.log(element);
+      this.productService.addSale(element).subscribe({
+        next: (response) => {
+          // this.router.navigate(['makesale']);
+          console.log('checking the update user', response);
+        },
+      });
+    });
+    //sale completed
   }
 }

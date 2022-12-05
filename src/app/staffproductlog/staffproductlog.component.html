@@ -1,0 +1,107 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-2">
+      <app-staff-sidebar></app-staff-sidebar>
+    </div>
+    <div class="col-lg-8 mx-5">
+    <section>
+      <div class="row mt-3" style="background-color: rgb(244, 244, 249)"></div>
+    </section>
+    <section>
+      <div class="m-4">
+        <ul class="nav nav-tabs" id="myTab">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active" data-bs-toggle="tab"
+              >Products</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#profile" class="nav-link" data-bs-toggle="tab"
+              >Sales log</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#profile2" class="nav-link" data-bs-toggle="tab"
+              >Recent Updates</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#messages" class="nav-link" data-bs-toggle="tab"
+              >Suppliers</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="home">
+            <!-- <h4 class="mt-2">Home tab content</h4>
+            <p>
+              Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan
+              american apparel, butcher voluptate nisi qui. Raw denim you
+              probably haven't heard of them jean shorts Austin. Nesciunt tofu
+              stumptown aliqua, retro synth master cleanse. Mustache cliche
+              tempor, williamsburg carles vegan helvetica. Reprehenderit butcher
+              retro keffiyeh dreamcatcher synth.
+            </p> -->
+            <div class="customdisplay">
+              <div class="topper d-flex">
+                <h3 class="mx-4 mb-3 mt-5" style="color: Black">
+                  Available products
+                </h3>
+                <input
+                  type="text"
+                  placeholder="Search"
+                  [(ngModel)]="searchText"
+                />
+              </div>
+              <hr />
+              <table class="table mx-3" *ngIf="products && products.length > 0">
+                <thead>
+                  <tr>
+                    <th>ProductName</th>
+                    <th>Quantity</th>
+                    <th>CP</th>
+                    <th>SP</th>
+                    <th>PM</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    *ngFor="
+                      let Products of products
+                        | paginate: { itemsPerPage: 6, currentPage: p, id: '3' }
+                        | filter: searchText
+                    "
+                  >
+                    <!-- <th style="color: green">{{ Products.id }}</th> -->
+                    <th>{{ Products.productName }}</th>
+                    <th>{{ Products.quantity }}</th>
+                    <th>{{ Products.costPrice }}</th>
+                    <th>{{ Products.sellPrice }}</th>
+                    <th>{{ Products.margin }}</th>
+                    <th [ngClass]="Products.category">
+                      {{ Products.category }}
+                    </th>
+                    <!-- <th>
+                      <a
+                        [routerLink]="[
+                          '/productlog',
+                          'updateproduct',
+                          Products.id
+                        ]"
+                        >Delete</a
+                      >
+                    </th> -->
+                  </tr>
+                </tbody>
+              </table>
+              <p *ngIf="!products || products.length <= 0">No product found</p>
+              <!-- pagination function -->
+
+              <pagination-controls
+                id="3"
+                (pageChange)="p = $event"
+              ></pagination-controls>
+            </div>
+          </div>

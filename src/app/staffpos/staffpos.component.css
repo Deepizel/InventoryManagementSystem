@@ -1,0 +1,133 @@
+body {
+  background-color: aliceblue;
+}
+/* .formcard {
+  height: 100px;
+  width: 95%;
+  border: 1px solid red;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: antiquewhite;
+} */
+
+#userinfo {
+  margin-left: 20px;
+  width: 250px;
+}
+
+#prompt {
+  background-color: green;
+  color: white;
+}
+
+.additems {
+  border-bottom: 1px solid black;
+}
+
+/* .productSelect{
+    background-color: antiquewhite;
+    height: 90px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} */
+
+/* table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+} */
+button {
+  height: 30px;
+  border-radius: 4px;
+  background-color: #f4511e;
+  color: white;
+  width: 90px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+/* button:after {
+  content: "";
+  background: #90ee90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+} */
+
+button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+/* .button {
+  /* padding: 15px 25px; */
+/* font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999; */
+/* } */
+*/ button:hover {
+  background-color: #3e8e41;
+}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+input {
+  border: 1px solid grey;
+  height: 40px;
+  border-radius: 4px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="text"]::placeholder {
+  /* Firefox, Chrome, Opera */
+  padding-left: 10px;
+}
+th {
+  background-color: black;
+  color: white;
+}
+#totalz {
+  margin-top: 50px;
+  margin-left: 45rem;
+}
+
+.ordersectn {
+  border: 1px solid grey;
+  height: 250px;
+  overflow-y: scroll;
+   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+#complete{
+  background-color: #3e8e41;
+  position: relative;
+  width: 100px;
+  left: 500%;
+}
+
+.col-lg-9{
+  background-color: 
+#fafafa;
+}

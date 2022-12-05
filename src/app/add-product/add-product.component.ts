@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./add-product.component.css'],
 })
 export class AddProductComponent implements OnInit {
+  value:number = 5;
   addProductRequest: Products = {
     id: 0,
     productName: '',
